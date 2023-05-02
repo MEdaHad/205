@@ -1,0 +1,144 @@
+/* Text Elements */
+
+h1 {
+  margin-bottom: .75rem;
+  color: #dae4e9;
+  letter-spacing: -.015em;
+  font-weight: 700;
+  font-size: 16vmin;
+  font-family: 'Arimo', cursive;
+  line-height: 1;
+}
+
+aside p {
+  text-indent: 0vw;
+  font-weight: 700;
+  font-size: .9rem;
+  font-family: 'Arimo', cursive;
+}
+
+p {
+  margin-bottom: 0;
+  color: #dae4e9;
+  text-indent: 2vw;
+  font-size: .8rem;
+  font-family: 'Lora', cursive;
+}
+
+/* Layout Elements */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0c0b11;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+main {
+  padding: 2vh 4vw;
+}
+
+img {
+  max-width: none;
+}
+
+.fig-1 {
+  max-width: 240px;
+}
+
+picture {
+  margin-bottom: 1.5rem;
+  min-width: 0;
+  max-width: none;
+}
+
+.fig-2 {
+  display: none;
+}
+
+@supports (display: grid) {
+  /* Text Elements */
+
+  h1 {
+    grid-area: title;
+  }
+
+  /* Layout Elements */
+
+  aside {
+    grid-area: aside;
+  }
+
+  section {
+    padding-left: 0vw;
+    grid-area: main;
+  }
+
+  main {
+    display: grid;
+
+    grid-column-gap: 2vw;
+  }
+
+  .fig-1 {
+    grid-area: fig-1;
+  }
+
+  picture {
+    grid-area: banner;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  @supports (display: grid) {
+      /* Layout Elements */
+
+    main {
+      padding-top: 2vh;
+    }
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .fig-2 {
+    display: block;
+  }
+
+  @supports (display: grid) {
+      /* Layout Elements */
+
+    main {
+      padding-right: 0vw;
+      padding-left: 0vw;
+
+      grid-template-areas: '. aside . fig-2 fig-2' 'title title banner banner banner' 'fig-1 main banner banner banner';
+      grid-template-rows: repeat(3 , auto);
+      grid-template-columns: repeat(5 , 1fr);
+    }
+
+    section {
+      -webkit-column-width: 12em;
+         -moz-column-width: 12em;
+              column-width: 12em;
+      -webkit-column-gap: 1.5rem;
+         -moz-column-gap: 1.5rem;
+              column-gap: 1.5rem;
+    }
+
+    picture {
+        max-width: 800px;
+    }
+
+    .fig-2 {
+      margin-bottom: .75rem;
+
+      grid-area: fig-2;
+    }
+  }
+}

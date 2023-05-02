@@ -1,0 +1,45 @@
+  
+  .flex-item {
+    margin: 10px;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px solid #999;
+    border-radius: 5px;
+    flex-basis: 25%;
+  }
+
+  #add-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 15px;
+  }
+  
+  #add-form {
+    display: none;
+  }
+  
+  #add-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #add-form input[type="text"] {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #add-form button[type="submit"] {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

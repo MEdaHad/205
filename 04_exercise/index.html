@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Books</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">
+        <h2>Books</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Status</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="book-list"></tbody>
+        </table>
+
+        <button id="add-btn">Add Book</button>
+
+        <form id="add-form">
+          <label>Title:</label>
+          <input type="text" id="title-input" />
+          <label>Author:</label>
+          <input type="text" id="author-input" />
+          <label>Status:</label>
+          <select id="status-select">
+            <option value="In Stock">In Stock</option>
+            <option value="Sold Out">Sold Out</option>
+          </select>
+
+          <label>Price:</label>
+          <input type="text" id="price-input" />
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
